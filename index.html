@@ -1,212 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instagram Clone</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-
-body{
-  background:#fafafa;
-  display:flex;
-  justify-content:center;
-}
-
-.container{
-  width:100%;
-  max-width:600px;
-  padding-bottom:70px;
-}
-
-header{
-  position:sticky;
-  top:0;
-  background:white;
-  padding:15px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid #ddd;
-}
-
-header h1{
-  font-size:22px;
-  font-weight:600;
-}
-
-.icons i{
-  margin-left:15px;
-  cursor:pointer;
-}
-
-.stories{
-  display:flex;
-  overflow-x:auto;
-  padding:15px;
-  background:white;
-  border-bottom:1px solid #ddd;
-}
-
-.story{
-  text-align:center;
-  margin-right:15px;
-}
-
-.story img{
-  width:65px;
-  height:65px;
-  border-radius:50%;
-  border:3px solid #ff004f;
-}
-
-.story p{
-  font-size:12px;
-}
-
-.post{
-  background:white;
-  margin-top:15px;
-  border:1px solid #ddd;
-}
-
-.post-header{
-  display:flex;
-  align-items:center;
-  padding:10px;
-}
-
-.post-header img{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  margin-right:10px;
-}
-
-.post-img img{
-  width:100%;
-}
-
-.post-actions{
-  padding:10px;
-}
-
-.post-actions i{
-  margin-right:15px;
-  cursor:pointer;
-  font-size:20px;
-}
-
-.likes{
-  font-weight:500;
-  margin-top:5px;
-}
-
-.caption{
-  margin-top:5px;
-}
-
-footer{
-  position:fixed;
-  bottom:0;
-  width:100%;
-  max-width:600px;
-  background:white;
-  border-top:1px solid #ddd;
-  display:flex;
-  justify-content:space-around;
-  padding:10px 0;
-}
-
-footer i{
-  font-size:22px;
-  cursor:pointer;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Clone | Vlone Edition</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
 <body>
 
-<div class="container">
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-content">
+      <h1 class="logo">Instagram</h1>
+      
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search">
+      </div>
 
-<header>
-  <h1>Instagram</h1>
-  <div class="icons">
-    <i>❤️</i>
-    <i>✉️</i>
-  </div>
-</header>
+      <nav class="nav-actions">
+        <button><i data-lucide="home" class="nav-icon"></i></button>
+        <button><i data-lucide="message-circle" class="nav-icon"></i></button>
+        <button><i data-lucide="plus-square" class="nav-icon"></i></button>
+        <button><i data-lucide="compass" class="nav-icon"></i></button>
+        <button><i data-lucide="heart" class="nav-icon"></i></button>
+        <img src="https://images.unsplash.com/photo-1689910651250-89c8334c9f30?w=100&h=100&fit=crop" alt="Profile" class="profile-pic">
+      </nav>
+    </div>
+  </header>
 
-<div class="stories">
-  <div class="story">
-    <img src="https://i.pravatar.cc/150?img=1">
-    <p>Deepti Baliya</p>
-  </div>
-  <div class="story">
-    <img src="https://i.pravatar.cc/150?img=2">
-    <p>rohit</p>
-  </div>
-  <div class="story">
-    <img src="https://i.pravatar.cc/150?img=3">
-    <p>priya</p>
-  </div>
-  <div class="story">
-    <img src="https://i.pravatar.cc/150?img=4">
-    <p>aman</p>
-  </div>
-</div>
+  <!-- Main Content -->
+  <main>
+    <div class="feed-container">
+      
+      <!-- Stories -->
+      <section class="stories-bar">
+        <div class="story-item">
+          <div class="story-circle">
+            <img src="https://images.unsplash.com/photo-1689910651250-89c8334c9f30?w=100&h=100&fit=crop" alt="User">
+          </div>
+          <p class="story-username">Your story</p>
+        </div>
+        <div class="story-item">
+          <div class="story-circle">
+            <img src="https://images.unsplash.com/photo-1618908623278-dfcf55e6f687?w=100&h=100&fit=crop" alt="User">
+          </div>
+          <p class="story-username">traveler_jane</p>
+        </div>
+        <div class="story-item">
+          <div class="story-circle">
+            <img src="https://images.unsplash.com/photo-1689910651250-89c8334c9f30?w=100&h=100&fit=crop" alt="User">
+          </div>
+          <p class="story-username">foodie_mike</p>
+        </div>
+        <div class="story-item">
+          <div class="story-circle">
+            <img src="https://images.unsplash.com/photo-1618908623278-dfcf55e6f687?w=100&h=100&fit=crop" alt="User">
+          </div>
+          <p class="story-username">nature_lover</p>
+        </div>
+        <div class="story-item">
+          <div class="story-circle">
+            <img src="https://images.unsplash.com/photo-1689910651250-89c8334c9f30?w=100&h=100&fit=crop" alt="User">
+          </div>
+          <p class="story-username">urban_explorer</p>
+        </div>
+      </section>
 
-<div class="post">
-  <div class="post-header">
-    <img src="https://i.pravatar.cc/150?img=5">
-    <b>Deepti Baliya</b>
-  </div>
+      <!-- Posts -->
+      <article class="post-card">
+        <div class="post-header">
+          <div class="post-user">
+            <img src="https://images.unsplash.com/photo-1618908623278-dfcf55e6f687?w=100&h=100&fit=crop" alt="User">
+            <div>
+              <p class="post-username">traveler_jane</p>
+              <p class="post-location">Swiss Alps</p>
+            </div>
+          </div>
+          <button><i data-lucide="more-horizontal"></i></button>
+        </div>
+        <div class="post-image-container">
+          <img src="https://images.unsplash.com/photo-1609373066983-cee8662ea93f?w=1080" alt="Post" class="post-image">
+        </div>
+        <div class="post-actions">
+          <div class="actions-left">
+            <button><i data-lucide="heart" class="nav-icon"></i></button>
+            <button><i data-lucide="message-circle" class="nav-icon"></i></button>
+            <button><i data-lucide="send" class="nav-icon"></i></button>
+          </div>
+          <button><i data-lucide="bookmark" class="nav-icon"></i></button>
+        </div>
+        <div class="post-info">
+          <p class="likes-count">342 likes</p>
+          <p class="post-caption"><span>traveler_jane</span> Amazing sunset at the mountains! 🌄 #nature #travel</p>
+          <p class="view-comments">View all 2 comments</p>
+          <p class="post-time">2h ago</p>
+        </div>
+        <div class="comment-input-area">
+          <button><i data-lucide="smile"></i></button>
+          <input type="text" class="comment-input" placeholder="Add a comment...">
+          <button class="post-btn">Post</button>
+        </div>
+      </article>
 
-  <div class="post-img">
-    <img src="https://picsum.photos/600/400">
-  </div>
+      <article class="post-card">
+        <div class="post-header">
+          <div class="post-user">
+            <img src="https://images.unsplash.com/photo-1689910651250-89c8334c9f30?w=100&h=100&fit=crop" alt="User">
+            <div>
+              <p class="post-username">foodie_mike</p>
+              <p class="post-location">Café Moderne, Paris</p>
+            </div>
+          </div>
+          <button><i data-lucide="more-horizontal"></i></button>
+        </div>
+        <div class="post-image-container">
+          <img src="https://images.unsplash.com/photo-1684568519320-8c6b14f7e65f?w=1080" alt="Post" class="post-image">
+        </div>
+        <div class="post-actions">
+          <div class="actions-left">
+            <button><i data-lucide="heart" class="nav-icon"></i></button>
+            <button><i data-lucide="message-circle" class="nav-icon"></i></button>
+            <button><i data-lucide="send" class="nav-icon"></i></button>
+          </div>
+          <button><i data-lucide="bookmark" class="nav-icon"></i></button>
+        </div>
+        <div class="post-info">
+          <p class="likes-count">521 likes</p>
+          <p class="post-caption"><span>foodie_mike</span> Delicious brunch at my favorite cafe ☕️🥐</p>
+          <p class="view-comments">View all 1 comment</p>
+          <p class="post-time">5h ago</p>
+        </div>
+        <div class="comment-input-area">
+          <button><i data-lucide="smile"></i></button>
+          <input type="text" class="comment-input" placeholder="Add a comment...">
+          <button class="post-btn">Post</button>
+        </div>
+      </article>
 
-  <div class="post-actions">
-    <i onclick="likePost()">❤️</i>
-    <i>💬</i>
-    <i>📤</i>
-    <div class="likes" id="likeCount">120 likes</div>
-    <div class="caption"><b>Deepti Baliya</b> Exploring the mountains 🌄</div>
-  </div>
-</div>
+    </div>
 
-</div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-user">
+        <div class="sidebar-user-info">
+          <img src="https://images.unsplash.com/photo-1689910651250-89c8334c9f30?w=100&h=100&fit=crop" alt="Profile">
+          <div>
+            <p class="sidebar-username">yourprofile</p>
+            <p class="sidebar-fullname">Your Name</p>
+          </div>
+        </div>
+        <button class="switch-btn">Switch</button>
+      </div>
 
-<footer>
-  <i>🏠</i>
-  <i>🔍</i>
-  <i>➕</i>
-  <i>🎬</i>
-  <i>👤</i>
-</footer>
+      <div class="suggestions-header">
+        <h3>Suggestions For You</h3>
+        <button class="see-all">See All</button>
+      </div>
 
-<script>
-let liked = false;
-let count = 120;
+      <div class="suggestion-item">
+        <div class="suggestion-user">
+          <img src="https://images.unsplash.com/photo-1618908623278-dfcf55e6f687?w=100&h=100&fit=crop" alt="S">
+          <div>
+            <p class="sidebar-username">nature_lover</p>
+            <p class="sidebar-fullname">Followed by traveler_jane</p>
+          </div>
+        </div>
+        <button class="follow-btn">Follow</button>
+      </div>
+      <div class="suggestion-item">
+        <div class="suggestion-user">
+          <img src="https://images.unsplash.com/photo-1689910651250-89c8334c9f30?w=100&h=100&fit=crop" alt="S">
+          <div>
+            <p class="sidebar-username">urban_explorer</p>
+            <p class="sidebar-fullname">Suggested for you</p>
+          </div>
+        </div>
+        <button class="follow-btn">Follow</button>
+      </div>
+    </aside>
+  </main>
 
-function likePost(){
-  if(!liked){
-    count++;
-    document.getElementById("likeCount").innerText = count + " likes";
-    liked = true;
-  }else{
-    count--;
-    document.getElementById("likeCount").innerText = count + " likes";
-    liked = false;
-  }
-}
-</script>
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav">
+    <button><i data-lucide="home"></i></button>
+    <button><i data-lucide="search"></i></button>
+    <button><i data-lucide="plus-square"></i></button>
+    <button><i data-lucide="clapperboard"></i></button>
+    <img src="https://images.unsplash.com/photo-1689910651250-89c8334c9f30?w=100&h=100&fit=crop" alt="Profile" class="profile-pic">
+  </nav>
 
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Subtle interaction: Hover post scale (already in CSS)
+    // Dark mode toggle or system preference logic can be added here
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+  </script>
 </body>
 </html>
