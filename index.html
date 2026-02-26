@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Clone</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#fafafa;
+  display:flex;
+  justify-content:center;
+}
+
+.container{
+  width:100%;
+  max-width:600px;
+  padding-bottom:70px;
+}
+
+header{
+  position:sticky;
+  top:0;
+  background:white;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #ddd;
+}
+
+header h1{
+  font-size:22px;
+  font-weight:600;
+}
+
+.icons i{
+  margin-left:15px;
+  cursor:pointer;
+}
+
+.stories{
+  display:flex;
+  overflow-x:auto;
+  padding:15px;
+  background:white;
+  border-bottom:1px solid #ddd;
+}
+
+.story{
+  text-align:center;
+  margin-right:15px;
+}
+
+.story img{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  border:3px solid #ff004f;
+}
+
+.story p{
+  font-size:12px;
+}
+
+.post{
+  background:white;
+  margin-top:15px;
+  border:1px solid #ddd;
+}
+
+.post-header{
+  display:flex;
+  align-items:center;
+  padding:10px;
+}
+
+.post-header img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  margin-right:10px;
+}
+
+.post-img img{
+  width:100%;
+}
+
+.post-actions{
+  padding:10px;
+}
+
+.post-actions i{
+  margin-right:15px;
+  cursor:pointer;
+  font-size:20px;
+}
+
+.likes{
+  font-weight:500;
+  margin-top:5px;
+}
+
+.caption{
+  margin-top:5px;
+}
+
+footer{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  max-width:600px;
+  background:white;
+  border-top:1px solid #ddd;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+}
+
+footer i{
+  font-size:22px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <h1>Instagram</h1>
+  <div class="icons">
+    <i>❤️</i>
+    <i>✉️</i>
+  </div>
+</header>
+
+<div class="stories">
+  <div class="story">
+    <img src="https://i.pravatar.cc/150?img=1">
+    <p>Deepti Baliya</p>
+  </div>
+  <div class="story">
+    <img src="https://i.pravatar.cc/150?img=2">
+    <p>rohit</p>
+  </div>
+  <div class="story">
+    <img src="https://i.pravatar.cc/150?img=3">
+    <p>priya</p>
+  </div>
+  <div class="story">
+    <img src="https://i.pravatar.cc/150?img=4">
+    <p>aman</p>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-header">
+    <img src="https://i.pravatar.cc/150?img=5">
+    <b>Deepti Baliya</b>
+  </div>
+
+  <div class="post-img">
+    <img src="https://picsum.photos/600/400">
+  </div>
+
+  <div class="post-actions">
+    <i onclick="likePost()">❤️</i>
+    <i>💬</i>
+    <i>📤</i>
+    <div class="likes" id="likeCount">120 likes</div>
+    <div class="caption"><b>Deepti Baliya</b> Exploring the mountains 🌄</div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <i>🏠</i>
+  <i>🔍</i>
+  <i>➕</i>
+  <i>🎬</i>
+  <i>👤</i>
+</footer>
+
+<script>
+let liked = false;
+let count = 120;
+
+function likePost(){
+  if(!liked){
+    count++;
+    document.getElementById("likeCount").innerText = count + " likes";
+    liked = true;
+  }else{
+    count--;
+    document.getElementById("likeCount").innerText = count + " likes";
+    liked = false;
+  }
+}
+</script>
+
+</body>
+</html>
